@@ -8,20 +8,24 @@
     <div id="eaten">
         <div>
             <h3>These Burgs Are Eaten!</h3>
-            {{#each hdbsBurg}}
-            {{#if devoured}}
-                {{> burger-block.handelbars}}
-            {{/if}}
+            {{#each burger}}
+            <li>
+                <p><span class="label">ID:</span> {{this.id}}</p>
+                <p><span class="label">Burger Name:</span> {{this.burgerName}}</p>
+                <p><span class="label">Devoured?:</span> {{this.devoured}}</p>
+            </li>
             {{/each}}
         </div>
     </div>
     <div id="unEaten">
         <div>
             <h3>Eat These Burgs!</h3>
-            {{#each hdbsBurg}}
-            {{#unless devoured}}
-                 {{> burger-block.handelbars}}
-            {{/unless}}
+            {{#each burger}}
+            <li>
+                <p><span class="label">ID:</span> {{this.id}}</p>
+                <p><span class="label">Burger Name:</span> {{this.burgerName}}</p>
+                <p><span class="label">Devoured?:</span> {{this.devoured}}</p>
+            </li>
             {{/each}}
         </div>
     </div>
