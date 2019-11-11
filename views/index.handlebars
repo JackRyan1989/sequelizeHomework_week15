@@ -9,26 +9,31 @@
             <div>
                 <h3>These Burgs Are Eaten!</h3>
                 {{#each burger}}
+                {{#if devoured}}
                 <li>
                     <p><span class="label">ID:</span> {{this.id}}</p>
                     <p><span class="label">Burger Name:</span> {{this.burgerName}}</p>
-                    <p><span class="label">Devoured?:</span> {{this.devoured}}</p>
+                    <p><span class="label">Devoured?</span> {{this.devoured}}</p>
                 </li>
+                {{/if}}
                 {{/each}}
             </div>
         </div>
-        <div id= 'burgImg' class="col-lg-3">
+        <div id= 'burgImg' class="col-lg-3 mx-auto">
             <img src="/assets/img/burgerIllustration.jpeg" class="w-75">
         </div>
         <div id="unEaten" class="col-lg-3 text-center mx-auto">
             <div>
                 <h3>Eat These Burgs!</h3>
                 {{#each burger}}
+                {{#unless devoured}}
                 <li>
                     <p><span class="label">ID:</span> {{this.id}}</p>
                     <p><span class="label">Burger Name:</span> {{this.burgerName}}</p>
                     <p><span class="label">Devoured?:</span> {{this.devoured}}</p>
+                    <button class="eatBurger" data-id="{{this.id}}">EAT DIS BURGER</button>
                 </li>
+                {{/unless}}
                 {{/each}}
             </div>
         </div>

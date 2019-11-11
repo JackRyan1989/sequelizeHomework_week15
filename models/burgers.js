@@ -11,8 +11,8 @@ const burger = {
             cb(res);
         });
     },
-    updateOne: function(bName, dev, colId, cb){
-        orm.updateOne("burgers", bName, dev, colId, function(res){
+    updateOne: function(dev, colId, cb){
+        orm.updateOne("burgers", dev, colId, function(res){
             cb(res);
         });
     }

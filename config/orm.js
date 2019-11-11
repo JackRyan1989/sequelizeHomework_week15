@@ -20,8 +20,8 @@ const orm = {
             cb(result);
         });
     },
-    updateOne: function (table, bName, dev, colId, cb) {
-        let queryStr = "UPDATE " + table + " SET burgerName = " + bName + ", devoured = " + dev + " WHERE id = " + colId;
+    updateOne: function (table, dev, colId, cb) {
+        let queryStr = "UPDATE " + table + " SET devoured = " + dev.dev + " WHERE id = " + colId;
         connection.query(queryStr, function(err, result){
             if (err) {
                 throw (err);

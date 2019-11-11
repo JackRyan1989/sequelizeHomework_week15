@@ -29,7 +29,6 @@ router.get('/api/burgs/:id', function(req, res){
 router.put('/api/burgs/:id', function(req, res){
     let burgID = req.params.id;
     burger.updateOne({
-        bName: req.body.burger,
         dev: req.body.dev,
     }, burgID, function(result){
         if (result.changedRows === 0) {
