@@ -6,7 +6,6 @@ const burger = require('../models/burgers');
 //Route for select all:
 router.get('/', function(req, res){
     burger.selectAll(function(data){
-        console.log(data);
         let hdbsBurg = {
             burger: data
         };

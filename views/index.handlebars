@@ -1,32 +1,36 @@
 <div class="container">
 
-    <div class="text-center mx-auto">
-        <h1>Welcome to EAT-DA-BURGER</h1>
+    <div>
+        <h1 class="text-center mx-auto">Welcome to EAT-DA-BURGER</h1>
         <h3>The only place on the internet where you can create a burger and then virtually eat it!</h3>
     </div>
-
-    <div id="eaten">
-        <div>
-            <h3>These Burgs Are Eaten!</h3>
-            {{#each burger}}
-            <li>
-                <p><span class="label">ID:</span> {{this.id}}</p>
-                <p><span class="label">Burger Name:</span> {{this.burgerName}}</p>
-                <p><span class="label">Devoured?:</span> {{this.devoured}}</p>
-            </li>
-            {{/each}}
+    <div class="row">
+        <div id="eaten" class="col-lg-3 text-center mx-auto">
+            <div>
+                <h3>These Burgs Are Eaten!</h3>
+                {{#each burger}}
+                <li>
+                    <p><span class="label">ID:</span> {{this.id}}</p>
+                    <p><span class="label">Burger Name:</span> {{this.burgerName}}</p>
+                    <p><span class="label">Devoured?:</span> {{this.devoured}}</p>
+                </li>
+                {{/each}}
+            </div>
         </div>
-    </div>
-    <div id="unEaten">
-        <div>
-            <h3>Eat These Burgs!</h3>
-            {{#each burger}}
-            <li>
-                <p><span class="label">ID:</span> {{this.id}}</p>
-                <p><span class="label">Burger Name:</span> {{this.burgerName}}</p>
-                <p><span class="label">Devoured?:</span> {{this.devoured}}</p>
-            </li>
-            {{/each}}
+        <div id= 'burgImg' class="col-lg-3">
+            <img src="/assets/img/burgerIllustration.jpeg" class="w-75">
+        </div>
+        <div id="unEaten" class="col-lg-3 text-center mx-auto">
+            <div>
+                <h3>Eat These Burgs!</h3>
+                {{#each burger}}
+                <li>
+                    <p><span class="label">ID:</span> {{this.id}}</p>
+                    <p><span class="label">Burger Name:</span> {{this.burgerName}}</p>
+                    <p><span class="label">Devoured?:</span> {{this.devoured}}</p>
+                </li>
+                {{/each}}
+            </div>
         </div>
     </div>
 </div>
