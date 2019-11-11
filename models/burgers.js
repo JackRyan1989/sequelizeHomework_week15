@@ -15,6 +15,11 @@ const burger = {
         orm.updateOne("burgers", dev, colId, function(res){
             cb(res);
         });
+    },
+    addOne: function(colName, rowVals, cb) {
+        orm.addOne("burgers", colName, rowVals, function(res){
+            cb(res);
+        });
     }
 };
 

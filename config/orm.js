@@ -28,6 +28,13 @@ const orm = {
             }
             cb(result);
         });
+    },
+    addOne: function(table, colName, rowVals, cb) {
+        let queryStr = "INSERT INTO " + table + " (" + colName.toString() + "," + rowVals.toString() + ") VALUES (?, ?) ";
+        connection.query(queryStr, colName, rowVals, function(err, result){
+            if (err) throw err;
+            cb(result);
+        }); 
     }
 };
 
