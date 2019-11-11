@@ -21,7 +21,7 @@ router.get('/api/burgs/:id', function(req, res){
         if (result.changedRows === 0) {
             res.status(404).end();
         } else {
-            res.status(200).end();
+            res.json(result);
         }
     });
 });
@@ -36,7 +36,7 @@ router.put('/api/burgs/:id', function(req, res){
         if (result.changedRows === 0) {
             res.status(404).end();
         } else {
-            res.status(200).end();
+            res.json(result);
         }
     });
 });
