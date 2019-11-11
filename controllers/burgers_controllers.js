@@ -1,15 +1,15 @@
 const express = require('express');
-const burger = require('../models/burgers');
-
 const router = express.Router();
+const burger = require('../models/burgers');
 
 //Create all routes and logic for those routes below:
 //Route for select all:
 router.get('/', function(req, res){
     burger.selectAll(function(data){
+        console.log(data);
         let hdbsBurg = {
             burger: data
-        }
+        };
         res.render('index', hdbsBurg);
     });
 });

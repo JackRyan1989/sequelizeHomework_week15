@@ -3,7 +3,7 @@ const connection = require('./connection');
 //Object for all orm functions:
 const orm = {
     selectAll: function (table, cb) {
-        let queryStr = "SELECT * FROM" + table + ';';
+        let queryStr = "SELECT * FROM " + table + ';';
         connection.query(queryStr, function (err, result) {
             if (err) {
                 result.status(500).end();
@@ -12,7 +12,7 @@ const orm = {
         });
     },
     selectOne: function (table, colId, cb) {
-        let queryStr = "SELECT * FROM" + table + "WHERE id = " + colId;
+        let queryStr = "SELECT * FROM " + table + "WHERE id = " + colId;
         connection.query(queryStr, function (err, result) {
             if (err) {
                 res.status(500).end();
