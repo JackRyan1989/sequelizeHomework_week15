@@ -17,7 +17,7 @@ $(function () {
         event.preventDefault();
         let newBurger = {
             bName: $("#bn").val().trim(),
-            dev: false
+            dev: 0
         };
         $.ajax("/api", {
             type: "POST",

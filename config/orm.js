@@ -30,8 +30,9 @@ const orm = {
         });
     },
     addOne: function(table, colName, rowVals, cb) {
-        let queryStr = "INSERT INTO " + table + " (" + colName.toString() + "," + rowVals.toString() + ") VALUES (?, ?) ";
-        connection.query(queryStr, colName, rowVals, function(err, result){
+        console.log(colName.toString());
+        let queryStr = "INSERT INTO " + table + " (" + colName.toString() + ") VALUES (?, ?) ";
+        connection.query(queryStr, rowVals, function(err, result){
             if (err) throw err;
             cb(result);
         }); 

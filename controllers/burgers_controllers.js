@@ -41,9 +41,9 @@ router.put('/api/burgs/:id', function (req, res) {
 
 router.post("/api", function (req, res) {
     burger.addOne(["burgerName", "devoured"],
-        [req.body.bName, req.body.dev]), function (result) {
+        [req.body.bName, req.body.dev], function (result) {
             res.json({ id: result.instertId });
-        };
+        });
 });
 
 module.exports = router;
