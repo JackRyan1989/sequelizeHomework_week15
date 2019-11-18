@@ -7,5 +7,9 @@ module.exports = (sequelize, DataTypes) => {
   },
     eaten: {type: DataTypes.BOOLEAN, defaultValue: false}
   });
+
+  Burgers.associate = function(models) {
+    Burgers.belongsTo(models.Customer, {});
+};
   return Burgers;
 };

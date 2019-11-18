@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 //Require our model(s):
-const conn = require("./models");
+const db = require("./models");
 
 //Data parsing middleware
 app.use(express.urlencoded({ extended: true }));
@@ -23,7 +23,7 @@ app.set("view engine", "handlebars");
 require("./routes/api-routes.js")(app);
 
 //Syncing our sequelize models and then starting our express server:
-conn.sequelize.sync({}).then(function () {
+db.sequelize.sync({force: true}).then(function () {
     app.listen(port, function () {
         console.log("Server listening on: " + port);
     });

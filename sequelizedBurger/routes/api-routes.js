@@ -21,6 +21,14 @@ module.exports = function (app) {
             res.json(data);
         });
     });
+    //Post new customer:
+    app.post('/api/cust', function(req, res){
+        db.Customer.create({
+            name: req.body.cName
+        }).then(function(data){
+            res.json(data);
+        });
+    });
     //Updates burger:
     app.put('/api/burgs/:id', function(req, res){
         db.Burgers.update({
