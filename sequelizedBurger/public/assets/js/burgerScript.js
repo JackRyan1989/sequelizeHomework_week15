@@ -19,7 +19,7 @@ $(function () {
         let newBurger = {
             bName: $("#bn").val().trim(),
             dev: 0
-        };
+        };  
         $.ajax("/api/burgs", {
             type: "POST",
             data: newBurger
