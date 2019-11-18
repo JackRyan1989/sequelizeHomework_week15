@@ -1,26 +1,11 @@
-const orm = require('../config/orm');
-
-const burger = {
-    selectAll: function(cb){
-        orm.selectAll("burgers", function(res){
-            cb(res);
-        });
-    },
-    selectOne: function(colId, cb){
-        orm.selectOne("burgers", colId, function(res){
-            cb(res);
-        });
-    },
-    updateOne: function(dev, colId, cb){
-        orm.updateOne("burgers", dev, colId, function(res){
-            cb(res);
-        });
-    },
-    addOne: function(colName, rowVals, cb) {
-        orm.addOne("burgers", colName, rowVals, function(res){
-            cb(res);
-        });
+'use strict';
+module.exports = (sequelize, DataTypes) => {
+  const burgers = sequelize.define('burgers', {
+    burgerName:{type: DataTypes.STRING, allowNull: false, validate: {
+      len: [1, 50]
     }
+  } ,
+    eaten: {type: DataTypes.BOOLEAN, defaultValue: false}
+  });
+  return burgers;
 };
-
-module.exports = burger;

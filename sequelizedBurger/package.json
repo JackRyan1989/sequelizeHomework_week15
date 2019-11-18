@@ -1,7 +1,7 @@
 {
-  "name": "eatdaburger",
+  "name": "sequelizedburger",
   "version": "1.0.0",
-  "description": "",
+  "description": "Welcome to EAT DA BURGER.",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -9,17 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JackRyan1989/eatDaBurger.git"
+    "url": "git+https://github.com/JackRyan1989/sequelizedBurger.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JackRyan1989/eatDaBurger/issues"
+    "url": "https://github.com/JackRyan1989/sequelizedBurger/issues"
   },
-  "homepage": "https://github.com/JackRyan1989/eatDaBurger#readme",
+  "homepage": "https://github.com/JackRyan1989/sequelizedBurger#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "mysql": "^2.17.1"
-  }
+    "mysql": "^2.17.1",
+    "mysql2": "^2.0.0",
+    "sequelize": "^5.21.2"
+  },
+  "devDependencies": {}
 }
